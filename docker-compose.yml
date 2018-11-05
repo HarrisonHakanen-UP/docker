@@ -1,0 +1,119 @@
+version: '3'
+
+services:
+
+  #
+  # Dependências
+  #
+
+  mysql-adventure-works:
+    image: mysql-adventure-works
+    container_name: mysql-adventure-works
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=root
+    restart: always
+
+
+  eureka:
+    image: springcloud/eureka
+    container_name: eureka
+    ports:
+      - 8761:8761
+
+      
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "secret string"
+      RABBITMQ_NODENAME: rabbit1
+    volumes:
+      - ./rabbitMQ/rabbitmq.config:/etc/rabbitmq/rabbitmq.config
+      - ./rabbitMQ/definitions.json:/etc/rabbitmq/definitions.json
+    ports:
+      - 5671:5671
+      - 5672:5672
+      - 15671:15671
+      - 15672:15672
+    links:
+      - eureka
+
+
+  #
+  # Módulos AdventureWorks
+  #
+
+  modulo-admin:
+      image: sistemasdeinformacao/modulo-admin
+      container_name: modulo-admin
+      ports:
+        - 8091:8091
+      depends_on:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+      links:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+
+
+  modulo-compras:
+      image: sistemasdeinformacao/modulo-compras
+      container_name: modulo-compras
+      ports:
+        - 8092:8092
+      depends_on:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+      links:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+
+
+  modulo-inventario:
+      image: sistemasdeinformacao/modulo-inventario
+      container_name: modulo-inventario
+      ports:
+        - 8093:8093
+      depends_on:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+      links:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+
+
+  modulo-produtos:
+      image: sistemasdeinformacao/modulo-produtos
+      container_name: modulo-produtos
+      ports:
+        - 8094:8094
+      depends_on:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+      links:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+
+
+  modulo-rh:
+      image: sistemasdeinformacao/modulo-rh
+      container_name: modulo-rh
+      ports:
+        - 8096:8096
+      depends_on:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+      links:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
