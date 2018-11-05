@@ -7,7 +7,7 @@ services:
   #
 
   mysql-adventure-works:
-    image: mysql-adventure-works
+    image: sistemasdeinformacao/mysql-adventure-works
     container_name: mysql-adventure-works
     environment:
       - MYSQL_ROOT_PASSWORD=root
