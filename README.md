@@ -8,8 +8,17 @@
   ```
 
   - Observações: 
-    - Adicionar o parâmetro "-d" ao comando abaixo para executar em modo background
-    - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos que não necessários
+    - Adicionar o parâmetro "-d" ao comando abaixo para executar em modo background;
+    - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos que não necessários;
+    - Lista de comandos úteis no Docker:
+      ```
+      # docker ps
+      # docker images
+      # docker rmi -f {id}
+      # docker exec -it {imagem} bash
+      # docker stop {container}
+      # docker-compose down
+      ```
 
 ### Repositório dos containers
 
