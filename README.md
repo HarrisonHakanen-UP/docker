@@ -20,7 +20,7 @@
       # docker-compose down
       ```
 
-### Repositório dos containers
+### Repositório dos containers (DockerHub)
 
 https://hub.docker.com/u/sistemasdeinformacao/
 
@@ -33,12 +33,15 @@ https://hub.docker.com/u/sistemasdeinformacao/
   sistemasdeinformacao/modulo-produtos
   sistemasdeinformacao/modulo-rh
   ```
-
 - Dependências:
   ```
   mysql:5.6
   rabbitmq:3-management
   springcloud/eureka
+  ```  
+- Download individual do container:
+  ```
+  # docker pull sistemasdeinformacao/{nome da imagem}
   ```
 
 ### Acesso ao container MySQL para executar comandos SQL, caso necessário
