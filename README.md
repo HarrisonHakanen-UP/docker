@@ -51,3 +51,13 @@ https://hub.docker.com/u/sistemasdeinformacao/
   - Observações:
     - Usuário: root
     - Senha:   root
+    
+### Endereço das aplicações
+
+  - Módulo admin: http://localhost:8091/
+  - Módulo compras: http://localhost:8092/
+  - Módulo inventário: http://localhost:8093/
+  - Módulo produtos: http://localhost:8094/
+  - Módulo rh: http://localhost:8096/
+  
+  * Observações*: As rotas das aplicações estão nos arquivos README.md dos repositórios
