@@ -9,7 +9,7 @@
 
   - Observações: 
     - Adicionar o parâmetro "-d" ao comando abaixo para executar em modo background;
-    - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos que não necessários;
+    - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos não necessários;
     - Lista de comandos úteis no Docker:
       ```
       # docker ps
