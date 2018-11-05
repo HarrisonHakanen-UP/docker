@@ -3,46 +3,11 @@ version: '3'
 services:
 
   #
-  # Dependências
-  #
-
-  mysql-adventure-works:
-    image: sistemasdeinformacao/mysql-adventure-works
-    container_name: mysql-adventure-works
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=root
-    restart: always
-
-
-  eureka:
-    image: springcloud/eureka
-    container_name: eureka
-    ports:
-      - 8761:8761
-
-      
-  rabbitmq:
-    image: rabbitmq:3-management
-    container_name: rabbitmq
-    environment:
-      RABBITMQ_ERLANG_COOKIE: "secret string"
-      RABBITMQ_NODENAME: rabbit1
-    volumes:
-      - ./rabbitMQ/rabbitmq.config:/etc/rabbitmq/rabbitmq.config
-      - ./rabbitMQ/definitions.json:/etc/rabbitmq/definitions.json
-    ports:
-      - 5671:5671
-      - 5672:5672
-      - 15671:15671
-      - 15672:15672
-    links:
-      - eureka
-
-
-  #
   # Módulos AdventureWorks
   #
+  # Observações
+  #  - Adicionar o parâmetro "-d" ao comando abaixo para executar em modo background;
+  #  - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos que não necessários;
 
   modulo-admin:
       image: sistemasdeinformacao/modulo-admin
@@ -117,3 +82,40 @@ services:
         - mysql-adventure-works
         - eureka
         - rabbitmq
+
+
+  #
+  # Dependências
+  #
+
+  mysql-adventure-works:
+    image: sistemasdeinformacao/mysql-adventure-works
+    container_name: mysql-adventure-works
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    restart: always
+
+
+  eureka:
+    image: springcloud/eureka
+    container_name: eureka
+    ports:
+      - 8761:8761
+
+      
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "secret string"
+      RABBITMQ_NODENAME: rabbit1
+    volumes:
+      - ./rabbitMQ/rabbitmq.config:/etc/rabbitmq/rabbitmq.config
+      - ./rabbitMQ/definitions.json:/etc/rabbitmq/definitions.json
+    ports:
+      - 5671:5671
+      - 5672:5672
+      - 15671:15671
+      - 15672:15672
+    links:
+      - eureka
