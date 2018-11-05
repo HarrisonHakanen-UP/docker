@@ -53,7 +53,7 @@ https://hub.docker.com/u/sistemasdeinformacao/
     - Senha:   root
     
 ### Endereço das aplicações
-
+  - Eureka: http://localhost:8761/
   - Módulo admin: http://localhost:8091/
   - Módulo compras: http://localhost:8092/
   - Módulo inventário: http://localhost:8093/
