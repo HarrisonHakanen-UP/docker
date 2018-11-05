@@ -60,4 +60,4 @@ https://hub.docker.com/u/sistemasdeinformacao/
   - Módulo produtos: http://localhost:8094/
   - Módulo rh: http://localhost:8096/
   
-  * Observações*: As rotas das aplicações estão nos arquivos README.md dos repositórios
+  - *Observações: As rotas das aplicações estão nos arquivos README.md dos repositórios*
