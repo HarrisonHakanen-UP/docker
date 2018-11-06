@@ -8,8 +8,8 @@
   ```
 
   - Observações: 
-    - Adicionar o parâmetro "-d" ao comando abaixo para executar em modo background;
-    - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos não necessários;
+    - Adicionar o parâmetro "-d" ao comando acima para executar em modo background;
+    - Para não executar todos os containers de uma só vez, utilize o caracter "#" e comente os módulos não necessários;
     - Lista de comandos úteis no Docker:
       ```
       # docker ps
@@ -54,6 +54,7 @@ https://hub.docker.com/u/sistemasdeinformacao/
   - Observações:
     - Usuário: root
     - Senha:   root
+    
     
 ### Endereço das aplicações
   - Eureka: http://localhost:8761/
