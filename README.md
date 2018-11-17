@@ -31,6 +31,7 @@ https://hub.docker.com/u/sistemasdeinformacao/
   sistemasdeinformacao/modulo-compras
   sistemasdeinformacao/modulo-inventario
   sistemasdeinformacao/modulo-produtos
+  sistemasdeinformacao/modulo-vendas
   sistemasdeinformacao/modulo-rh
   ```
 - Dependências:
@@ -45,15 +46,15 @@ https://hub.docker.com/u/sistemasdeinformacao/
   ```
 
 ### Acesso ao container MySQL para executar comandos SQL, caso necessário
-  ```
-  # docker exec -it mysql-adventure-works bash
-  #  mysql -u root -p
-  #  > SHOW DATABASES;
-  #  > exit;
-  ```
+  - Host:
+  ```localhost```
+  - Porta:
+  ```3307```
+  - Acesso via linha de comando:
+  ```mysql --host=localhost --protocol=TCP --port=3307 -u root -p```
   - Observações:
     - Usuário: root
-    - Senha:   root
+    - Senha:   root    
     
     
 ### Endereço das aplicações
@@ -62,6 +63,7 @@ https://hub.docker.com/u/sistemasdeinformacao/
   - Módulo compras: http://localhost:8092/
   - Módulo inventário: http://localhost:8093/
   - Módulo produtos: http://localhost:8094/
+  - Módulo vendas: http://localhost:8095/
   - Módulo RH: http://localhost:8096/
   
   - *Observações: As rotas das aplicações estão nos arquivos README.md dos repositórios*

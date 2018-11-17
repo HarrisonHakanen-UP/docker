@@ -6,7 +6,9 @@ services:
   # Módulos AdventureWorks
   #
   # Observações
-  #  - Adicionar o parâmetro "-d" ao comando abaixo para executar em modo background;
+  #  - Para baixar as imagens dos containers é necessário possuir uma conta no serviço "Docker Hub" (https://hub.docker.com/);
+  #  - Antes de baixar as imagens, realize o login em sua estação com o comando "docker login";
+  #  - Adicione o parâmetro "-d" ao comando "docker-compose up" para executar em modo background os serviços;
   #  - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos não necessários;
 
   modulo-admin:
@@ -69,6 +71,21 @@ services:
         - rabbitmq
 
 
+  modulo-vendas:
+      image: sistemasdeinformacao/modulo-vendas
+      container_name: modulo-vendas
+      ports:
+        - 8095:8095
+      depends_on:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+      links:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+
+
   modulo-rh:
       image: sistemasdeinformacao/modulo-rh
       container_name: modulo-rh
@@ -91,6 +108,8 @@ services:
   mysql-adventure-works:
     image: sistemasdeinformacao/mysql-adventure-works
     container_name: mysql-adventure-works
+    ports:
+      - 3307:3306
     environment:
       - MYSQL_ROOT_PASSWORD=root
     restart: always
