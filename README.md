@@ -7,11 +7,14 @@
   # docker-compose up
   ```
 
-  - Observações: 
-    - Adicionar o parâmetro "-d" ao comando acima para executar em modo background;
-    - Para não executar todos os containers de uma só vez, utilize o caracter "#" e comente os módulos não necessários;
+  - Observações:
+    - Para baixar as imagens dos containers é necessário possuir uma conta no serviço "Docker Hub" (https://hub.docker.com/);
+    - Antes de baixar as imagens, realize o login em sua estação com o comando "docker login";
+    - Adicione o parâmetro "-d" ao comando "docker-compose up" para executar em modo background os serviços;
+    - - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos não necessários;
     - Lista de comandos úteis no Docker:
       ```
+      # docker login
       # docker ps
       # docker images
       # docker rmi -f {id}
