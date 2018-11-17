@@ -8,10 +8,10 @@
   ```
 
   - Observações:
-    - Para baixar as imagens dos containers é necessário possuir uma conta no serviço "Docker Hub" (https://hub.docker.com/);
+    - Para baixar as imagens dos containers é necessário possuir uma conta no serviço "Docker Hub" https://hub.docker.com/;
     - Antes de baixar as imagens, realize o login em sua estação com o comando "docker login";
-    - Adicione o parâmetro "-d" ao comando "docker-compose up" para executar em modo background os serviços;
-    - - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos não necessários;
+    - Adicione o parâmetro "-d" ao comando ```docker-compose up``` para executar em modo background os serviços;
+    - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos não necessários;
     - Lista de comandos úteis no Docker:
       ```
       # docker login
@@ -50,11 +50,11 @@ https://hub.docker.com/u/sistemasdeinformacao/
 
 ### Acesso ao container MySQL para executar comandos SQL, caso necessário
   - Host:
-  ```localhost```
+    ```localhost```
   - Porta:
-  ```3307```
+    ```3307```
   - Acesso via linha de comando:
-  ```mysql --host=localhost --protocol=TCP --port=3307 -u root -p```
+    ```mysql --host=localhost --protocol=TCP --port=3307 -u root -p```
   - Observações:
     - Usuário: root
     - Senha:   root    
