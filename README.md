@@ -61,12 +61,6 @@ https://hub.docker.com/u/sistemasdeinformacao/
     
     
 ### Endereço das aplicações
-  - Eureka: http://localhost:8761/
-  - Módulo admin: http://localhost:8091/
-  - Módulo compras: http://localhost:8092/
-  - Módulo inventário: http://localhost:8093/
-  - Módulo produtos: http://localhost:8094/
-  - Módulo vendas: http://localhost:8095/
-  - Módulo RH: http://localhost:8096/
+  - Verificar URL no serviço Eureka: http://localhost:8761/
   
   - *Observações: As rotas das aplicações estão nos arquivos README.md dos repositórios*
