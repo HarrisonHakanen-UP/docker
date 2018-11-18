@@ -36,6 +36,7 @@ https://hub.docker.com/u/sistemasdeinformacao/
   sistemasdeinformacao/modulo-produtos
   sistemasdeinformacao/modulo-vendas
   sistemasdeinformacao/modulo-rh
+  sistemasdeinformacao/modulo-pessoas
   ```
 - Dependências:
   ```

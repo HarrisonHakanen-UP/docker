@@ -101,6 +101,21 @@ services:
         - rabbitmq
 
 
+  modulo-pessoas:
+      image: sistemasdeinformacao/modulo-pessoas
+      container_name: modulo-pessoas
+      ports:
+        - 8097:8097
+      depends_on:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+      links:
+        - mysql-adventure-works
+        - eureka
+        - rabbitmq
+
+
   #
   # Dependências
   #
