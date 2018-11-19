@@ -8,8 +8,8 @@
   ```
 
   - Observações:
-    - Para baixar as imagens dos containers é necessário possuir uma conta no serviço "Docker Hub" https://hub.docker.com/;
-    - Antes de baixar as imagens, realize o login em sua estação com o comando "docker login";
+    - Para baixar as imagens dos containers é necessário possuir uma conta no serviço _Docker Hub_ https://hub.docker.com/;
+    - Antes de baixar as imagens, realize o login em sua estação com o comando ```docker login```;
     - Adicione o parâmetro "-d" ao comando ```docker-compose up``` para executar em modo background os serviços;
     - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos não necessários;
     - Lista de comandos úteis no Docker:
@@ -62,6 +62,6 @@ https://hub.docker.com/u/sistemasdeinformacao/
     
     
 ### Endereço das aplicações
-  - Verificar URL no serviço Eureka: http://localhost:8761/
+  - Verificar URLs das aplicações no serviço Eureka: http://localhost:8761/
   
   - *Observações: As rotas das aplicações estão nos arquivos README.md dos repositórios*
