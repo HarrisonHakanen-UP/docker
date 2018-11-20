@@ -54,8 +54,10 @@ https://hub.docker.com/u/sistemasdeinformacao/
     ```localhost```
   - Porta:
     ```3307```
-  - Acesso via linha de comando:
+  - Acesso via linha de comando quando a imagem for iniciada pelo docker-compose:
     ```mysql --host=localhost --protocol=TCP --port=3307 -u root -p```
+  - Acesso via linha de comando quando a imagem for iniciada manualmente:
+    ```mysql --host=localhost --protocol=TCP --port=3306 -u root -p```
   - Observações:
     - Usuário: root
     - Senha:   root    

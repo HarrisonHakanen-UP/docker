@@ -116,6 +116,17 @@ services:
         - rabbitmq
 
 
+  modulo-producao:
+      image: sistemasdeinformacao/modulo-producao
+      container_name: modulo-producao
+      ports:
+        - 1337:1337
+      depends_on:
+        - mysql-adventure-works
+      links:
+        - mysql-adventure-works
+
+
   #
   # Dependências
   #
