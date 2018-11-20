@@ -33,10 +33,12 @@ https://hub.docker.com/u/sistemasdeinformacao/
   sistemasdeinformacao/modulo-admin
   sistemasdeinformacao/modulo-compras
   sistemasdeinformacao/modulo-inventario
-  sistemasdeinformacao/modulo-produtos
-  sistemasdeinformacao/modulo-vendas
-  sistemasdeinformacao/modulo-rh
   sistemasdeinformacao/modulo-pessoas
+  sistemasdeinformacao/modulo-produtos
+  sistemasdeinformacao/modulo-producao
+  sistemasdeinformacao/modulo-rh
+  sistemasdeinformacao/modulo-vendas
+
   ```
 - Dependências:
   ```
@@ -51,13 +53,13 @@ https://hub.docker.com/u/sistemasdeinformacao/
 
 ### Acesso ao container MySQL para executar comandos SQL, caso necessário
   - Host:
-    ```localhost```
+        ```localhost```
   - Porta:
-    ```3307```
+        ```3307```
   - Acesso via linha de comando quando a imagem for iniciada pelo docker-compose:
-    ```mysql --host=localhost --protocol=TCP --port=3307 -u root -p```
+        ```mysql --host=localhost --protocol=TCP --port=3307 -u root -p```
   - Acesso via linha de comando quando a imagem for iniciada manualmente:
-    ```mysql --host=localhost --protocol=TCP --port=3306 -u root -p```
+        ```mysql --host=localhost --protocol=TCP --port=3306 -u root -p```
   - Observações:
     - Usuário: root
     - Senha:   root    
