@@ -1,26 +1,26 @@
 ## Informações sobre os containers e imagens das aplicações
 
 ### Executar aplicações, e baixar dependências
-  - Clonar o repositório ```https://github.com/sistemascorporativos3a/docker``` em sua máquina local e executar o comando:
-
-  ```
-  # docker-compose up
-  ```
+  - Clonar o repositório ```https://github.com/sistemascorporativos3a/docker``` em sua máquina local
+  - Para executar todos os módulos, utilize o comando:
+  ```docker-compose up```
+  - Para executar individualmente um dos módulos, utilize o comando:
+  ```docker-compose -f docker-compose-modulo-{nome}.yml up```
 
   - Observações:
     - Para baixar as imagens dos containers é necessário possuir uma conta no serviço _Docker Hub_ https://hub.docker.com/;
     - Antes de baixar as imagens, realize o login em sua estação com o comando ```docker login```;
     - Adicione o parâmetro "-d" ao comando ```docker-compose up``` para executar em modo background os serviços;
-    - Para não executar todos os containers de uma vez só, utilize o caracter "#" e comente os módulos não necessários;
     - Lista de comandos úteis no Docker:
       ```
-      # docker login
-      # docker ps
-      # docker images
-      # docker rmi -f {id}
-      # docker exec -it {imagem} bash
-      # docker stop {container}
-      # docker-compose down
+      docker login
+      docker ps
+      docker images
+      docker rmi -f {id}
+      docker exec -it {imagem} bash
+      docker stop {container}
+      docker-compose up
+      docker-compose down
       ```
 
 ### Repositório dos containers (DockerHub)
@@ -38,24 +38,23 @@ https://hub.docker.com/u/sistemasdeinformacao/
   sistemasdeinformacao/modulo-producao
   sistemasdeinformacao/modulo-rh
   sistemasdeinformacao/modulo-vendas
-
   ```
 - Dependências:
   ```
   mysql:5.6
   rabbitmq:3-management
   springcloud/eureka
-  ```  
+  ```
 - Download individual do container:
   ```
-  # docker pull sistemasdeinformacao/{nome da imagem}
+  docker pull sistemasdeinformacao/{nome da imagem}
   ```
 
 ### Acesso ao container MySQL para executar comandos SQL, caso necessário
   - Host:
-        ```localhost```
+    ```localhost```
   - Porta:
-        ```3307```
+    ```3307```
   - Acesso via linha de comando quando a imagem for iniciada pelo docker-compose:
     ```
     mysql --host=localhost --protocol=TCP --port=3307 -u root -p
@@ -66,7 +65,7 @@ https://hub.docker.com/u/sistemasdeinformacao/
     ```
   - Observações:
     - Usuário: root
-    - Senha:   root    
+    - Senha:   root
     
     
 ### Endereço das aplicações
