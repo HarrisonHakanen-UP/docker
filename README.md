@@ -3,9 +3,9 @@
 ### Executar aplicações, e baixar dependências
   - Clonar o repositório ```https://github.com/sistemascorporativos3a/docker``` em sua máquina local
   - Para executar todos os módulos, utilize o comando:
-  ```docker-compose up```
+    ```docker-compose up```
   - Para executar individualmente um dos módulos, utilize o comando:
-  ```docker-compose -f docker-compose-modulo-{nome}.yml up```
+    ```docker-compose -f docker-compose-modulo-{nome}.yml up```
 
   - Observações:
     - Para baixar as imagens dos containers é necessário possuir uma conta no serviço _Docker Hub_ https://hub.docker.com/;
